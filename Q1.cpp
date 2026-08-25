@@ -14,4 +14,5 @@ int main(void){
 		vetor[i] = i;
 		printf("%d \t", vetor[i]);
 	}
-	return 0;}
+	return 0;
+}
