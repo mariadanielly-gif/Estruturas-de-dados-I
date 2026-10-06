@@ -4,31 +4,36 @@
 typedef struct {
     char nome[50];
     float preco;
-    int N;
+
 } Fruta;
 
+void preenche(Fruta * f) {
+    char opcao;
+
     FILE * arq = fopen("fruta.txt", "w");
-        if (arq == NULL) { exit(1);};
-
-
-    for (int i = 0; i < N; i++) {
-    printf("Digite o nome da fruta: ");
-    scanf(" %[^\n]", nome);
-    printf("Digite o preco da fruta: ");
-    scanf("%f", &preco);
+        if (arq == NULL) { exit(1);
+        }
     
+    do{
+        printf("Digite o nome da fruta: ");
+        scanf(" %[^\n]", f->nome);
 
-    fprintf(arq, "%s\t%.2f", nome, preco);
+        printf("Digite o preco da fruta: ");
+        scanf("%f", &f->preco);
+        
+        fprintf(arq, "%s\t%.2f\n", f->nome, f->preco);
+
+        printf("Deseja cadastrar outra fruta? (s/n): ");
+        scanf(" %c", &opcao);
+        
+    } while(opcao == 's' || opcao == 'S');
+
+
+    fclose(arq);
+    printf("Cadastro encerrado e dados salvos com sucesso!\n");
 }
-fclose(arq);
-
 int main(void) {
     Fruta f;
-}
-
- preenche(&f);
-    printf("\nNome: %s\n", f.nome);
-  
-    
+    preenche(&f);
     return 0;
 }

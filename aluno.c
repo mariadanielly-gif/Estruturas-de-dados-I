@@ -10,7 +10,7 @@ int main() {
     FILE * arq = fopen("aluno.txt", "w");
         if (arq == NULL) { exit(1);};
 
-        printf("=== Digite a quantidade de alunos: ===\n");
+        printf("Digite a quantidade de alunos:\n");
         scanf("%d", &N);
         for (int i = 0; i < N; i++) {
         printf("Digite o nome: ");

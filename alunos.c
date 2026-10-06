@@ -22,7 +22,7 @@ int main() {
         printf("Matricula: ");
         scanf("%d", &matricula);
         
-        printf("Nome (sem espaços): ");
+        printf("Nome: ");
         scanf("%s", nome);
         
         printf("Nota final: ");

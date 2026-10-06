@@ -1,0 +1,4 @@
+101 Teclado 10 85.50
+102 Mouse 20 35.90
+103 Monitor 5 899.90
+104 Headset 8 120.00
